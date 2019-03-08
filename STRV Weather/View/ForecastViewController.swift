@@ -95,16 +95,22 @@ extension ForecastViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 111
+        return 100
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        
+        
         let view = UIView()
+        
+        
         view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         let label = UILabel()
-        label.frame = CGRect(x: 10, y: 5, width: 100, height: 40)
+        label.frame = CGRect(x: 10, y: 5, width: 200, height: 40)
         label.tintColor = #colorLiteral(red: 0.1947149634, green: 0.1947149634, blue: 0.1947149634, alpha: 1)
-        label.text = forecastList[section].weekDay
+        label.font = UIFont (name: "Montserrat-SemiBold", size: 15)
+        label.text = forecastList[section].weekDay.uppercased()
         view.addSubview(label)
         view.layer.borderWidth = 1
         view.layer.borderColor = #colorLiteral(red: 0.8709999919, green: 0.8709999919, blue: 0.8709999919, alpha: 1)

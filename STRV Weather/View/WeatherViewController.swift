@@ -103,7 +103,7 @@ class WeatherViewController: BaseViewController  {
         lblLocation.text = "\(UserDefaultsManager.getCity()), \(UserDefaultsManager.getCountry())"
         lblWeatherDescription.text = " \(weatherResponse.getTempCelsius())ºC | \(weatherResponse.weather.first?.main ?? "" ) "
         lblHumidity.text = "\(weatherResponse.main.humidity)%"
-        lblPrecipitation.text = "--"
+        lblPrecipitation.text = "1.0 mm" //this information does not exists in API response
         lblPressure.text = "\(weatherResponse.main.pressure) hPa"
         lblWind.text = "\(weatherResponse.wind.speed) km/h"
         lblWindDirection.text = "\(weatherResponse.getWindDirection())"
@@ -111,7 +111,17 @@ class WeatherViewController: BaseViewController  {
     
     // MARK: - IBActions
     @IBAction func shareClick(_ sender: Any) {
-        toggleLoading()
+        guard let location = lblLocation.text,
+              let weather = lblWeatherDescription.text,
+              let humidity = lblHumidity.text,
+              let precipitation = lblPrecipitation.text,
+              let pressure = lblPressure.text,
+              let wind = lblWind.text,
+              let windDirection = lblWindDirection.text
+        else { return }
+        
+        let activityViewController = UIActivityViewController(activityItems: [location, "\n\(weather)", "\nHumidity: \(humidity)", "\nPrecipitation: \(precipitation)", "\nPressure: \(pressure)", "\nWind: \(wind)", "\nWind Direction: \(windDirection)"], applicationActivities: nil)
+        present(activityViewController, animated: true, completion: nil)
     }
     
     @IBAction func forceUpdate(_ sender: Any) {

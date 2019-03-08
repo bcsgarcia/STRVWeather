@@ -27,11 +27,24 @@ class BaseViewController: UIViewController {
             locationManager.startUpdatingLocation()
         }
         
+        setTabBarFont()
+        
     }
+    
+    
+    func setTabBarFont(){
+        let appearance = UITabBarItem.appearance()
+        let attributes = [NSAttributedString.Key.font:UIFont(name: "Montserrat-SemiBold", size: 10)]
+        appearance.setTitleTextAttributes(attributes as [NSAttributedString.Key : Any], for: .normal)
+    }
+    
 
     var timer: Timer? = nil
     
     var y = 0
+    
+    
+    
     @objc func loading() {
         
         UIView.animate(withDuration: 0.1, animations: {

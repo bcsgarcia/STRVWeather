@@ -11,22 +11,24 @@ import UIKit
 
 class Const {
     
-    static let sharedInstance = Rest()
+    
+    
+    
     
     static let imgWeather = [
-        "snow": [ UIImage(named: "100x100 Snow (Day)") , UIImage(named: "100x100 Snow (Night)")],
-        "mist": [ UIImage(named: "100x100 Mist (Day)") , UIImage(named: "100x100 Mist (Night)") ],
-        "thunderstorm": [ UIImage(named: "100x100 Thunderstorm (Day)") , UIImage(named: "100x100 Thunderstorm (Night)") ],
-        "thunderstorm with rain" : [ UIImage(named: "100x100 Thunderstorm (Day)") , UIImage(named: "100x100 Thunderstorm (Night)") ],
-        "clear sky": [ UIImage(named: "100x100 Clear Sky (Day)") , UIImage(named: "100x100 Clear Sky (Night)") ],
-        "broken clouds": [ UIImage(named: "100x100 Broken Clouds (Day)") , UIImage(named: "100x100 Broken Clouds (Night)") ],
-        "scattered clouds": [ UIImage(named: "100x100 Scattered Clouds (Day)") , UIImage(named: "100x100 Scattered Clouds (Night)") ],
-        "few clouds": [ UIImage(named: "100x100 Few Clouds (Day)") , UIImage(named: "100x100 Few Clouds (Night)") ],
-        "rain": [ UIImage(named: "100x100 Rain (Day)") , UIImage(named: "100x100 Rain (Night)") ],
-        "light rain": [ UIImage(named: "100x100 Rain (Day)") , UIImage(named: "100x100 Rain (Night)") ],
-        "moderate rain": [ UIImage(named: "100x100 Rain (Day)") , UIImage(named: "100x100 Rain (Night)") ],
-        "heavy intensity rain": [ UIImage(named: "100x100 Rain (Day)") , UIImage(named: "100x100 Rain (Night)") ],
-        "shower rain": [ UIImage(named: "100x100 Shower Rain (Day)") , UIImage(named: "100x100 Shower Rain (Night)") ]
+        "snow": [ #imageLiteral(resourceName: "SnowDay") , #imageLiteral(resourceName: "SnowNight")],
+        "mist": [ #imageLiteral(resourceName: "MistDay") , #imageLiteral(resourceName: "MistNight") ],
+        "thunderstorm": [ #imageLiteral(resourceName: "ThunderstormDay") , #imageLiteral(resourceName: "ThunderstormNight") ],
+        "thunderstorm with rain" : [ #imageLiteral(resourceName: "ThunderstormDay") , #imageLiteral(resourceName: "ThunderstormNight") ],
+        "clear sky": [ #imageLiteral(resourceName: "ClearSkyDay") , #imageLiteral(resourceName: "ClearSkyNight") ],
+        "broken clouds": [ #imageLiteral(resourceName: "BrokenCloudsDay") , #imageLiteral(resourceName: "BrokenCloudsNight") ],
+        "scattered clouds": [ #imageLiteral(resourceName: "ScatteredCloudsDay") , #imageLiteral(resourceName: "ScatteredCloudsNight") ],
+        "few clouds": [ #imageLiteral(resourceName: "FewCloudsDay") , #imageLiteral(resourceName: "FewCloudsNight") ],
+        "rain": [ #imageLiteral(resourceName: "RainDay") , #imageLiteral(resourceName: "RainNight") ],
+        "light rain": [ #imageLiteral(resourceName: "RainDay") , #imageLiteral(resourceName: "RainNight") ],
+        "moderate rain": [ #imageLiteral(resourceName: "RainDay") , #imageLiteral(resourceName: "RainNight") ],
+        "heavy intensity rain": [ #imageLiteral(resourceName: "RainDay") , #imageLiteral(resourceName: "RainNight") ],
+        "shower rain": [ #imageLiteral(resourceName: "ShowerRainDay") , #imageLiteral(resourceName: "ShowerRainNight") ]
         ]
     
     

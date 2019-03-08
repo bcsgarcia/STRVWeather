@@ -13,7 +13,7 @@ extension UIImageView {
     
     func setImgWeather(weather: WeatherResponse) {
         guard let weatherObj = weather.weather.first else { return }
-        self.image = Const.imgWeather[weatherObj.description]?[ weather.isDay() ? 0 : 1 ]!
+        self.image = Const.imgWeather[weatherObj.description]?[ weather.isDay() ? 0 : 1 ]
     }
     
 }
