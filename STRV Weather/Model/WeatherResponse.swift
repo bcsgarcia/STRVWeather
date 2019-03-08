@@ -53,7 +53,11 @@ struct WeatherResponse: Codable {
     
     func getWindDirection()->String {
         
-        let deg = Int(self.wind.deg)
+        guard let strDeg = self.wind.deg else {
+            return "--"
+        }
+        
+        let deg = Int(strDeg)
         
         if deg <= 45 {
             return "NE"
