@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "ForecastController.convertForecast(with:):ForecastController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "forecastList[2].list[6].weather[0].description">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "UIImageView.setImgWeather(weather:):UIImageView+Weather.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "weatherObj.main">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "WeatherResponse.getWindDirection():WeatherResponse.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "String(self.wind.deg)">
+            </PersistentString>
+            <PersistentString
+               value = "Int(self.wind.deg)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
