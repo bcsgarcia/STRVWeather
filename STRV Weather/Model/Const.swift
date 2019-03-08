@@ -11,9 +11,8 @@ import UIKit
 
 class Const {
     
-    
-    
-    
+    //API APP ID
+    static let appID = "APPID=305712ce702fef5e05b05a11dc2a4337"
     
     static let imgWeather = [
         "snow": [ #imageLiteral(resourceName: "SnowDay") , #imageLiteral(resourceName: "SnowNight")],
@@ -30,7 +29,6 @@ class Const {
         "heavy intensity rain": [ #imageLiteral(resourceName: "RainDay") , #imageLiteral(resourceName: "RainNight") ],
         "shower rain": [ #imageLiteral(resourceName: "ShowerRainDay") , #imageLiteral(resourceName: "ShowerRainNight") ]
         ]
-    
     
     static let arrColors = [ #colorLiteral(red: 1, green: 0.4101189778, blue: 0.7974392983, alpha: 1), #colorLiteral(red: 1, green: 0.5763723254, blue: 0, alpha: 1), #colorLiteral(red: 0.03369532153, green: 0.6890986562, blue: 0.002656287979, alpha: 1), #colorLiteral(red: 0.1824092567, green: 0.5699850917, blue: 1, alpha: 1), #colorLiteral(red: 0.9994240403, green: 0.805973684, blue: 0.03894568284, alpha: 1), #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1) ]
     

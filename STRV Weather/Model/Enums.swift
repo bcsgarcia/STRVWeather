@@ -19,8 +19,8 @@ enum UDKeys: String {
 }
 
 enum HttpUrlRequest : String {
-     case Weather = "http://api.openweathermap.org/data/2.5/weather?APPID=305712ce702fef5e05b05a11dc2a4337&"
-     case Forecast = "http://api.openweathermap.org/data/2.5/forecast?APPID=305712ce702fef5e05b05a11dc2a4337&"
+     case Weather = "http://api.openweathermap.org/data/2.5/weather?"
+     case Forecast = "http://api.openweathermap.org/data/2.5/forecast?"
     static let allValues = [Weather, Forecast]
 }
 

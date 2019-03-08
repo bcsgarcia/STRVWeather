@@ -52,8 +52,9 @@ class ForecastViewController: BaseViewController {
     
     // MARK: - Methods
     @objc func retrieveForecast(){
-        toggleLoading()
+        
         if UserDefaultsManager.getCity() != "" {
+            toggleLoading()
             lblTitle.text = UserDefaultsManager.getCity()
             forecastController.callUrlRequest(onComplete: { (forecastList) in
                 self.forecastList = []
@@ -72,14 +73,15 @@ class ForecastViewController: BaseViewController {
                     break
                 }
                 self.toggleLoading()
+                self.forecastList = [Forecast(weekDay: "Please check your Internet connection")]
+                self.tableview.reloadData()
             }
+        } else {
+            
         }
-        else {
-            sleep(3)
-            self.toggleLoading()
-            retrieveForecast()
-        }
+        
     }
+    
     
 }
 
@@ -99,15 +101,10 @@ extension ForecastViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        
-        
-        
         let view = UIView()
-        
-        
         view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         let label = UILabel()
-        label.frame = CGRect(x: 10, y: 5, width: 200, height: 40)
+        label.frame = CGRect(x: 10, y: 5, width: tableView.layer.bounds.size.width - 10, height: 40)
         label.tintColor = #colorLiteral(red: 0.1947149634, green: 0.1947149634, blue: 0.1947149634, alpha: 1)
         label.font = UIFont (name: "Montserrat-SemiBold", size: 15)
         label.text = forecastList[section].weekDay.uppercased()
@@ -123,6 +120,7 @@ extension ForecastViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ForecastTableViewCell else { return UITableViewCell() }
+        
         let weather = forecastList[indexPath.section].list[indexPath.row]
         cell.prepare(with: weather)
         return cell

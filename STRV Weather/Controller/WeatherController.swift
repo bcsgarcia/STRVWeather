@@ -10,6 +10,7 @@ import Foundation
 
 class WeatherController {
     
+    // MARK: - Methods
     func callUrlRequest(onComplete: @escaping (WeatherResponse)->Void, onError: @escaping (WeatherError)->Void) {
         
         if UserDefaultsManager.getLat() == 0 && UserDefaultsManager.getLon() == 0 {

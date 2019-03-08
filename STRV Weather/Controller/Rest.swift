@@ -11,12 +11,14 @@ import Alamofire
 
 class Rest {
     
+    // MARK: - Properties
     static let sharedInstance = Rest()
     
+    // MARK: - Methods
     func call(urlEnum: HttpUrlRequest, lat: Double, lon: Double, onComplete: @escaping ( Data )->Void, onError: @escaping (WeatherError)->Void ){
-        let urlString =  "\(urlEnum.rawValue)lat=\(lat)&lon=\(lon)"
+        let urlString =  "\(urlEnum.rawValue)\(Const.appID)&lat=\(lat)&lon=\(lon)"
         Alamofire.request(urlString, method: .get, parameters: nil, encoding: JSONEncoding(), headers: nil)
-            //.validate()
+            .validate()
             .responseJSON { (response) in
                 if response.result.value == nil {
                     onError(.noResponse)

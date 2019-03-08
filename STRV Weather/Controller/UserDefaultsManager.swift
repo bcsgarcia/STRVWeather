@@ -9,8 +9,10 @@
 import Foundation
 
 class UserDefaultsManager {
+    // MARK: - Properties
     static var defaults = UserDefaults.standard
    
+    // MARK: - Methods
     class func setCity(to city: String) {
         defaults.set(city, forKey: UDKeys.City.rawValue)
         synchronize()

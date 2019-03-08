@@ -33,8 +33,6 @@ class WeatherViewController: BaseViewController  {
     let retrieveWeatherTimeInterval : TimeInterval = 10
     let weatherController = WeatherController()
     
-    
-    
     // MARK: - Main Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,7 +58,6 @@ class WeatherViewController: BaseViewController  {
     
     // MARK: - Methods
     @objc func retrieveWeather(){
-        
         if UserDefaultsManager.getCity() != "" {
             toggleLoading()
             weatherController.callUrlRequest(onComplete: { (weatherResponse) in
@@ -78,12 +75,7 @@ class WeatherViewController: BaseViewController  {
                 self.toggleLoading()
             }
         }
-        else {
-            //sleep(3)
-            //retrieveWeather()
-        }
     }
-    
     
     func populateFields(with weatherResponse: WeatherResponse?){
         

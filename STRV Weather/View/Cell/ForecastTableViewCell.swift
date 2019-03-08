@@ -10,24 +10,27 @@ import UIKit
 
 class ForecastTableViewCell: UITableViewCell {
 
+    // MARK: - IBOutlets
     @IBOutlet weak var ivWeather: UIImageView!
     @IBOutlet weak var lblHour: UILabel!
     @IBOutlet weak var lblWeatherDesc: UILabel!
     @IBOutlet weak var lblTemp: UILabel!
     
+    // MARK: - Main Methods
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
+    
+    // MARK: - Methods
     func prepare(with weather: WeatherResponse){
         ivWeather.setImgWeather(weather: weather)
         lblHour.text = weather.getHour()
         lblWeatherDesc.text = weather.weather[0].main
         lblTemp.text = "\(weather.getTempCelsius())º"
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
     }
 
 }
