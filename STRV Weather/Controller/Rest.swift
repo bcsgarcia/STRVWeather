@@ -11,7 +11,7 @@ import Alamofire
 
 class Rest {
     
-    // MARK: - Properties
+    // MARK: - Singleton
     static let sharedInstance = Rest()
     
     // MARK: - Methods

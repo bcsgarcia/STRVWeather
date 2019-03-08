@@ -20,7 +20,6 @@ class ForecastViewController: BaseViewController {
     @IBOutlet weak var v5: UIView!
     @IBOutlet weak var v6: UIView!
     
-    
     // MARK: - Properties
     var retrieveForecastTimer: Timer!
     let retrieveForecastTimeInterval : TimeInterval = 10
@@ -76,12 +75,8 @@ class ForecastViewController: BaseViewController {
                 self.forecastList = [Forecast(weekDay: "Please check your Internet connection")]
                 self.tableview.reloadData()
             }
-        } else {
-            
         }
-        
     }
-    
     
 }
 

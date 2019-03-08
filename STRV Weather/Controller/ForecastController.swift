@@ -10,6 +10,7 @@ import Foundation
 
 class ForecastController {
     
+    
     // MARK: - Methods
     func callUrlRequest(onComplete: @escaping ([Forecast])->Void, onError: @escaping (WeatherError)->Void) {
         

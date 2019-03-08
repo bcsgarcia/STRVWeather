@@ -14,39 +14,31 @@ class BaseViewController: UIViewController {
     // MARK: - Properties
     var locationManager = CLLocationManager()
     var arrViews: [UIView] = []
+    var timer: Timer? = nil
+    var y = 0 //for loading animation
     
-    // MARK: - Properties
+    // MARK: - Main Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.locationManager.requestWhenInUseAuthorization()
-        
         if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             locationManager.startUpdatingLocation()
         }
-        
         setTabBarFont()
-        
     }
     
-    
+    // MARK: - Methods
     func setTabBarFont(){
         let appearance = UITabBarItem.appearance()
         let attributes = [NSAttributedString.Key.font:UIFont(name: "Montserrat-SemiBold", size: 10)]
         appearance.setTitleTextAttributes(attributes as [NSAttributedString.Key : Any], for: .normal)
     }
     
-
-    var timer: Timer? = nil
-    
-    var y = 0
-    
-    
-    
+    // MARK: Loading Animation
     @objc func loading() {
-        
         UIView.animate(withDuration: 0.1, animations: {
             for x in 0...5 {
                 self.arrViews[x].backgroundColor = Const.arrColors[self.y]
@@ -70,9 +62,9 @@ class BaseViewController: UIViewController {
             }
         }
     }
-
 }
 
+// MARK: - CLLocation Manager Delegate
 extension BaseViewController : CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {

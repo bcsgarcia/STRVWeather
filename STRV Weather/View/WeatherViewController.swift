@@ -120,7 +120,5 @@ class WeatherViewController: BaseViewController  {
         retrieveWeather()
     }
     
-    
-
 }
 

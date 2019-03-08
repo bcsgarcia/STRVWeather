@@ -29,6 +29,7 @@
 		928F33FC2232089F006ECD8E /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 928F33FB2232082F006ECD8E /* Montserrat-Light.ttf */; };
 		928F33FD223208A2006ECD8E /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 928F33FA2232082F006ECD8E /* Montserrat-Medium.ttf */; };
 		928F33FE223208A5006ECD8E /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 928F33F92232082F006ECD8E /* Montserrat-SemiBold.ttf */; };
+		9295DF082232B8050083F892 /* ControllersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295DF072232B8050083F892 /* ControllersTests.swift */; };
 		92A9267322315DEE006A2AF9 /* ForecastController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9267222315DEE006A2AF9 /* ForecastController.swift */; };
 		92A9267622315F88006A2AF9 /* ForecastResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9267522315F88006A2AF9 /* ForecastResponse.swift */; };
 		92A9267A22316148006A2AF9 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9267922316148006A2AF9 /* City.swift */; };
@@ -77,6 +78,7 @@
 		928F33F92232082F006ECD8E /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		928F33FA2232082F006ECD8E /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		928F33FB2232082F006ECD8E /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
+		9295DF072232B8050083F892 /* ControllersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllersTests.swift; sourceTree = "<group>"; };
 		92A9267222315DEE006A2AF9 /* ForecastController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastController.swift; sourceTree = "<group>"; };
 		92A9267522315F88006A2AF9 /* ForecastResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastResponse.swift; sourceTree = "<group>"; };
 		92A9267922316148006A2AF9 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 			children = (
 				92D33F6E222F58F200078792 /* STRV_WeatherTests.swift */,
 				92D33F70222F58F200078792 /* Info.plist */,
+				9295DF072232B8050083F892 /* ControllersTests.swift */,
 			);
 			path = "STRV WeatherTests";
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9295DF082232B8050083F892 /* ControllersTests.swift in Sources */,
 				92D33F6F222F58F200078792 /* STRV_WeatherTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
